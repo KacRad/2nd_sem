@@ -9,16 +9,16 @@ template<typename T, size_t N>
 class RingBuffer{
     private:
     std::array<T, N> ringBufferArray;
-    int head = 0;
-    int tail = 0;
-    int counter = 0;
-    int index = 0;
-    int incr;
+    int head;
+    int tail;
+    int counter;
+    int index;
 //=============================================================================
 
     public:
-    RingBuffer(){
-        std::array<T, N> ringBufferArray;
+    RingBuffer()
+        : head(0), tail(0), counter(0), index(0),
+    {
         initialize();
     }
 
@@ -47,18 +47,6 @@ class RingBuffer{
 
     int operator *(){
         return index;
-    }
-
-    RingBuffer operator++(){
-        RingBuffer temp;
-        temp.incr= incr++;
-        return temp;
-    }
-
-    RingBuffer operator++(int){
-        RingBuffer temp;
-        temp.incr = incr++;
-        return temp;
     }
 
     size_t maxSize(){
