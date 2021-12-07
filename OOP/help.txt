@@ -1,0 +1,4 @@
+This is a program to serialize a car class. 
+Usage: 
+./prog txt              saves a class to txt file
+./prog bin              saves a class to bin file
