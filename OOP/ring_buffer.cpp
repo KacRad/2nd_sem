@@ -17,7 +17,7 @@ class RingBuffer{
 
     public:
     RingBuffer()
-        : head(0), tail(0), counter(0), index(0),
+        : head(0), tail(0), counter(0), index(0)
     {
         initialize();
     }
